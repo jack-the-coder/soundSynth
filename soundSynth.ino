@@ -17,11 +17,11 @@ void setup() {
 void loop() {
   
   int len = 500;
-  int t1 = 220;
-  int t2 = 246.94;
-  int t3 = 277.18;
-  int t4 = 293.66;
-  int t5 = 329.63;
+  float t1 = 220;
+  float t2 = 246.94;
+  float t3 = 277.18;
+  float t4 = 293.66;
+  float t5 = 329.63;
   
   if (digitalRead(2) == HIGH) {
     tone(13, t1);
