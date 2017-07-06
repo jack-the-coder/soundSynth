@@ -16,8 +16,8 @@ void setup() {
 
 void loop() {
 
-  int scale = map(analogRead(0), 0, 1023, 0, 5);
-  int len = 500;
+  int scale = map(analogRead(0), 0, 1023, 0, 4);
+  int len = analogRead(5) + 50;
   float t1 = 220;
   float t2 = 246.94;
   float t3 = 277.18;
@@ -26,7 +26,6 @@ void loop() {
 
   if (scale == 0) {
 
-    len = 500;
     t1 = 220;
     t2 = 246.94;
     t3 = 277.18;
@@ -35,7 +34,7 @@ void loop() {
   }
   if (scale == 1) {
 
-    len = 500;
+
     t1 = 261.63;
     t2 = 293.66;
     t3 = 329.63;
@@ -44,7 +43,7 @@ void loop() {
   }
   if (scale == 2) {
 
-    len = 500;
+
     t1 = 293.66;
     t2 = 329.63;
     t3 = 349.23;
@@ -53,7 +52,7 @@ void loop() {
   }
   if (scale == 3) {
 
-    len = 500;
+
     t1 = 349.23;
     t2 = 392.00;
     t3 = 440.00;
@@ -62,22 +61,13 @@ void loop() {
   }
   if (scale == 4) {
 
-    len = 500;
     t1 = 392.00;
     t2 = 440.00;
     t3 = 493.88;
     t4 = 523.25;
     t5 = 587.33;
   }
-  if (scale == 5) {
 
-    len = 500;
-    t1 = 220;
-    t2 = 246.94;
-    t3 = 277.18;
-    t4 = 293.66;
-    t5 = 329.63;
-  }
 
 
   if (digitalRead(2) == HIGH) {
